@@ -4,7 +4,7 @@ LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lGL -pthread
 
 SRC = src/main.cpp $(wildcard src/imgui/*.cpp) $(wildcard src/imgui-sfml/*.cpp)
 OBJ = $(SRC:.cpp=.o)
-TARGET = imgui_sfml_test
+TARGET = A1
 
 all: $(TARGET)
 
