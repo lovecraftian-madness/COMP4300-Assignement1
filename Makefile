@@ -1,0 +1,18 @@
+CXX = g++
+CXXFLAGS = -std=c++17 -I./src -I./src/imgui -I./src/imgui-sfml -I/usr/include/SFML
+LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lGL -pthread
+
+SRC = src/main.cpp $(wildcard src/imgui/*.cpp) $(wildcard src/imgui-sfml/*.cpp)
+OBJ = $(SRC:.cpp=.o)
+TARGET = imgui_sfml_test
+
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CXX) $(OBJ) -o $@ $(LDFLAGS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ) $(TARGET)

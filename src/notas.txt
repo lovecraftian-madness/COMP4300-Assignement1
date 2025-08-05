@@ -1,0 +1,3 @@
+>sfml 2.62
+>imgui 1.87
+>imgui-sfml 2.4
