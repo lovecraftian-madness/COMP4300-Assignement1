@@ -9,7 +9,7 @@
 int main(int argc, char* argv[]) {
     const int wWidth=1600;
     const int wHeight=860;
-    sf::RenderWindow window(sf::VideoMode(wWidth, wHeight), "SFML Works!");
+    sf::RenderWindow window(sf::VideoMode(wWidth, wHeight), "Practice1");
     window.setFramerateLimit(60);
 
     ImGui::SFML::Init(window);
@@ -30,14 +30,14 @@ int main(int argc, char* argv[]) {
     circle.setPosition(10.0f,10.0f);
 
     sf::Font myFont;
-    /*
+    
     if(!myFont.loadFromFile("fonts/tech.ttf")){
         std::cerr<<"Could not load font!\n";
         exit(-1);
-    }*/
+    }
 
-    sf::Text text("Sample Text", myFont,24);
-    text.setPosition(0,wHeight-(float)text.getCharacterSize());
+    sf::Text text("Sample Text", myFont,32);
+    text.setPosition(10,wHeight-(float)text.getCharacterSize()-10);
 
     char displayString[255]="Sample Text";
 

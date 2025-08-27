@@ -1,8 +1,8 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -I./src -I./src/imgui -I./src/imgui-sfml -I/usr/include/SFML
+CXXFLAGS = -std=c++17 -I./src -I./src/imgui -I./src/imgui-sfml -I/usr/include/SFML -I./model/headers -I./model/src 
 LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lGL -pthread
 
-SRC = src/main.cpp $(wildcard src/imgui/*.cpp) $(wildcard src/imgui-sfml/*.cpp)
+SRC = src/main.cpp $(wildcard src/imgui/*.cpp) $(wildcard src/imgui-sfml/*.cpp) $(wildcard model/src/**/*.cpp) 
 OBJ = $(SRC:.cpp=.o)
 TARGET = A1
 
