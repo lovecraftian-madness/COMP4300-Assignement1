@@ -4,19 +4,18 @@
 #include <fstream>
 #include "InfoFigure.hpp"
 #include "InfoFont.hpp"
-#include "Vec2.hpp"
+#include <SFML/System/Vector2.hpp>
 #include <vector>
 
 class FileInfo{   
 public:
     std::string filePath;
-    Vec2 window;
+    sf::Vector2f window;
     InfoFont font;
     std::vector<InfoFigure> v1;
     
- 
     FileInfo():filePath("bin/config.txt"){};
     void setFileToRead(const std::string& filePath);
-    void loadFromFile(const std::string& filePath);
+    void loadFromFile();
 };
 #endif

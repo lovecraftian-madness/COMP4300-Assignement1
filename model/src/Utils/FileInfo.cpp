@@ -1,6 +1,6 @@
 #include "Utils/FileInfo.hpp"
 
-void FileInfo::loadFromFile(const std::string& filePath)
+void FileInfo::loadFromFile()
 {       
         std::ifstream fin(filePath);
         if (!fin) {
